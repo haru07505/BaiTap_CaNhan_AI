@@ -313,8 +313,6 @@ Q-Learning tiềm năng khi cần học từ trải nghiệm, không dựa vào 
 
 ![biểu đồ](source_gif_8puzzle/bieu_do_so_sanh.png)
 
-  Biểu đồ so sánh
-
 Biểu đồ trên so sánh thời gian thực hiện của các thuật toán giải bài toán 8-Puzzle. Kết quả cho thấy các thuật toán A* (7.8075s), IDA* (7.8017s) và BFS (7.5026s) có hiệu suất cao nhất, nhờ khả năng tìm kiếm có định hướng và đảm bảo tìm ra lời giải tối ưu. Greedy (25.3177s) và AND-OR (29.0626s) là hai thuật toán chậm nhất, do dễ bị lạc hướng khi phụ thuộc hoàn toàn vào heuristic hoặc phải xử lý nhiều nhánh trong môi trường không xác định. Các thuật toán tìm kiếm truyền thống như UCS, DFS, IDS có thời gian trung bình, trong đó DFS thường bị chậm do dễ đi sâu vào nhánh sai. Về phía các thuật toán ràng buộc, Backtracking mất nhiều thời gian (15.6161s), nhưng khi kết hợp với Forward Checking (9.3798s), thời gian cải thiện đáng kể nhờ loại bỏ sớm các nhánh không hợp lệ. Beam Search cũng cho kết quả khá (13.4489s) nhờ chỉ mở rộng các nhánh tốt nhất, nhưng vẫn có nguy cơ bỏ lỡ lời giải. Nhìn chung, các thuật toán có hướng dẫn tốt và kiểm soát mở rộng hiệu quả như A*, IDA* là lựa chọn tối ưu cho bài toán này.
 
 ## Kết luận
