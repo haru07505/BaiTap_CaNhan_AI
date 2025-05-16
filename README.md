@@ -54,11 +54,21 @@ Không sử dụng bất kỳ thông tin nào về khoảng cách đến trạng
 
 #### Hình ảnh gif của từng thuật toán
 
-![demo BFS](source_gif_8puzzle/bfs.gif)         ![demo DFS](source_gif_8puzzle/dfs.gif)
-            BFS                                                 DFS
+![demo BFS](source_gif_8puzzle/bfs.gif)    
 
-![demo IDS](source_gif_8puzzle/ids.gif)          ![demo UCS](source_gif_8puzzle/ucs.gif)
-            IDS                                                 UCS
+  BFS         
+
+![demo DFS](source_gif_8puzzle/dfs.gif)  
+
+  DFS
+
+![demo IDS](source_gif_8puzzle/ids.gif)   
+
+  IDS     
+
+![demo UCS](source_gif_8puzzle/ucs.gif)   
+
+  UCS
 
 #### Nhận xét
 
@@ -96,11 +106,17 @@ Kết hợp với chi phí thực để chọn đường đi tối ưu:
 
 #### Hình ảnh gif của từng thuật toán
 
-![demo Gready Search](source_gif_8puzzle/greedy.gif)       ![demo A*](source_gif_8puzzle/a_star.gif)
-            Greedy Search					                                              A* 
+![demo Gready Search](source_gif_8puzzle/greedy.gif)    
+
+  Greedy Search					
+  
+![demo A*](source_gif_8puzzle/a_star.gif)                                              
+
+  A* 
 
 ![demo IDA*](source_gif_8puzzle/ida_star.gif)
-				    IDA*
+				    
+  IDA*
 
 #### Nhận xét
 
@@ -147,7 +163,8 @@ Không duyệt toàn bộ không gian mà chỉ tập trung vào trạng thái �
 Nhóm này chỉ có Beam Search giải được nhờ vào chạy song song, các thuật toán còn lại đều bị kẹt hoặc thời gian giải quá lâu dẫn đến hệ thống bị đứng. Simulated Annealing và Genetic Algorithm khi đổi trạng thái đầu đơn giản hơn thì có thể giải ra. 
 
 ![demo Beam](source_gif_8puzzle/beam.gif)
-					  Beam
+					 
+  Beam
 
 #### Nhận xét
 
@@ -180,16 +197,20 @@ Thuật toán phải tìm ra một chuỗi hành động có thể áp dụng ch
 #### Hình ảnh gif của từng thuật toán
 
 ![demo And-Or](source_gif_8puzzle/and_or.gif)
-	          And-Or Search
+
+	And-Or Search
 
 ![demo PO](source_gif_8puzzle/partial_obs.gif)
-			Partial Observation with A*
+
+	Partial Observation with A*
 
 ![belief state](source_gif_8puzzle/belief_cua_partialobs.png)
-		Belief sinh ra từ trạng thái đầu bị thiếu 
+
+	Belief sinh ra từ trạng thái đầu bị thiếu 
 
 ![demo Sensorles](source_gif_8puzzle/sensorless.gif)
-		  Sensorless with A*
+
+	Sensorless with A*
 
 #### Nhận xét
 
@@ -227,8 +248,13 @@ Nếu không tìm được hành động thỏa mãn, thuật toán sẽ quay lu
 
 #### Hình ảnh gif của từng thuật toán
 
-![demo Backtracking](source_gif_8puzzle/backtracking.gif)       ![demo Backtracking with FC](source_gif_8puzzle/backtracking_fc.gif)
-          Backtracking			        Backtracking with forward checking
+![demo Backtracking](source_gif_8puzzle/backtracking.gif)    
+
+  Backtracking
+
+![demo Backtracking with FC](source_gif_8puzzle/backtracking_fc.gif)
+
+  Backtracking with forward checking
 
 Min Conflicts khi áp dụng vào trạng thái đầu này thì sẽ giải rất lâu với số lượng max steps rất lớn, vì vậy sẽ áp dụng vào trạng thái đầu đơn giản hơn để có thể giải ra. 
 
@@ -239,6 +265,7 @@ Nhóm này hiệu quả với 8-Puzzle trong các biến thể có điều kiệ
 ### Nhóm học tăng cường (Q-Learning)
 
 #### Thành phần chính của bài toán bao gồm:
+
   Trạng thái ban đầu: ma trận 3x3 với các số từ 0-8.
 
   Tập hành động: lên, xuống, trái, phải (di chuyển ô trống).
@@ -285,7 +312,8 @@ Q-Learning tiềm năng khi cần học từ trải nghiệm, không dựa vào 
 ### So sánh độ hiệu quả các thuật toán
 
 ![biểu đồ](source_gif_8puzzle/bieu_do_so_sanh.png)
-          Biểu đồ so sánh
+
+  Biểu đồ so sánh
 
 Biểu đồ trên so sánh thời gian thực hiện của các thuật toán giải bài toán 8-Puzzle. Kết quả cho thấy các thuật toán A* (7.8075s), IDA* (7.8017s) và BFS (7.5026s) có hiệu suất cao nhất, nhờ khả năng tìm kiếm có định hướng và đảm bảo tìm ra lời giải tối ưu. Greedy (25.3177s) và AND-OR (29.0626s) là hai thuật toán chậm nhất, do dễ bị lạc hướng khi phụ thuộc hoàn toàn vào heuristic hoặc phải xử lý nhiều nhánh trong môi trường không xác định. Các thuật toán tìm kiếm truyền thống như UCS, DFS, IDS có thời gian trung bình, trong đó DFS thường bị chậm do dễ đi sâu vào nhánh sai. Về phía các thuật toán ràng buộc, Backtracking mất nhiều thời gian (15.6161s), nhưng khi kết hợp với Forward Checking (9.3798s), thời gian cải thiện đáng kể nhờ loại bỏ sớm các nhánh không hợp lệ. Beam Search cũng cho kết quả khá (13.4489s) nhờ chỉ mở rộng các nhánh tốt nhất, nhưng vẫn có nguy cơ bỏ lỡ lời giải. Nhìn chung, các thuật toán có hướng dẫn tốt và kiểm soát mở rộng hiệu quả như A*, IDA* là lựa chọn tối ưu cho bài toán này.
 
