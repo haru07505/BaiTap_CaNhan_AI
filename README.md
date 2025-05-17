@@ -18,7 +18,7 @@
 
 ## Mục tiêu
 
-Bài tập này nhằm mục tiêu tìm hiểu và khám phá lĩnh vực thuật toán tìm kiếm, từ các phương pháp không sử dụng thông tin heuristic cho đến những kỹ thuật khai thác tri thức cụ thể của bài toán. Bên cạnh đó, nội dung cũng bao gồm các chiến lược tìm kiếm cục bộ, các phương pháp giải bài toán trong điều kiện có ràng buộc, cũng như các mô hình hoạt động trong môi trường phức tạp. Trọng tâm của bài tập này là triển khai và thử nghiệm các thuật toán này trên bài toán kinh điển 8-Puzzle, đồng thời trực quan hóa quá trình tìm kiếm nhằm làm nổi bật đặc trưng của từng thuật toán. Sau đó đưa ra các phân tích, đánh giá thông qua các chỉ số định lượng như số nút sinh ra, số nút duyệt, thời gian giải và độ dài lời giải.
+Bài tập này nhằm mục tiêu tìm hiểu và khám phá lĩnh vực thuật toán tìm kiếm, từ các phương pháp không sử dụng thông tin heuristic cho đến những kỹ thuật khai thác tri thức cụ thể của bài toán. Bên cạnh đó, nội dung cũng bao gồm các chiến lược tìm kiếm cục bộ, các phương pháp giải bài toán trong điều kiện có ràng buộc, cũng như các mô hình hoạt động trong môi trường phức tạp. Trọng tâm của bài tập này là triển khai và thử nghiệm các thuật toán này trên bài toán kinh điển 8-Puzzle, đồng thời trực quan hóa quá trình tìm kiếm nhằm làm nổi bật đặc trưng của từng thuật toán. Sau đó đưa ra các phân tích, đánh giá thông qua thời gian thực hiện dựa trên độ dài lời giải.
 
 ## Nội dung
 
